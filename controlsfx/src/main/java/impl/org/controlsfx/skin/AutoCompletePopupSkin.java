@@ -30,10 +30,13 @@ public class AutoCompletePopupSkin<T> implements Skin<AutoCompletePopup<T>> {
          * 5 number because when we have only one item we have the vertical
          * scrollBar showing for no reason.
          */
-        suggestionList.prefHeightProperty().bind(
-                Bindings.min(control.visibleRowCountProperty(), Bindings.size(suggestionList.getItems()))
-                .multiply(LIST_CELL_HEIGHT).add(5));
-        suggestionList.setCellFactory(TextFieldListCell.forListView(control.getConverter()));               
+        // suggestionList.prefHeightProperty().bind(
+        //         Bindings.min(control.visibleRowCountProperty(), Bindings.size(suggestionList.getItems()))
+        //         .multiply(LIST_CELL_HEIGHT).add(5));
+        suggestionList.setPrefHeight(15 + 20 * LIST_CELL_HEIGHT);
+        suggestionList.setPrefWidth(500);
+        suggestionList.maxHeightProperty().bind(control.maxHeightProperty());
+        suggestionList.setCellFactory(TextFieldListCell.forListView(control.getConverter()));
         registerEventListener();
     }
 
