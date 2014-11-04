@@ -24,9 +24,11 @@ public class AutoCompletePopupSkin<T> implements Skin<AutoCompletePopup<T>> {
 
         suggestionList.getStylesheets().add(AutoCompletionBinding.class
         		.getResource("autocompletion.css").toExternalForm()); //$NON-NLS-1$
-        suggestionList.prefHeightProperty().bind(
-                Bindings.size(suggestionList.getItems()).multiply(LIST_CELL_HEIGHT)
-                .add(15));
+        // suggestionList.prefHeightProperty().bind(
+        //         Bindings.size(suggestionList.getItems()).multiply(LIST_CELL_HEIGHT)
+        //         .add(15));
+        suggestionList.setPrefHeight(15 + 20 * LIST_CELL_HEIGHT);
+        suggestionList.setPrefWidth(500);
         suggestionList.maxHeightProperty().bind(control.maxHeightProperty());
         suggestionList.setCellFactory(TextFieldListCell.forListView(control.getConverter()));               
         registerEventListener();
@@ -45,7 +47,9 @@ public class AutoCompletePopupSkin<T> implements Skin<AutoCompletePopup<T>> {
             case ENTER:
                 onSuggestionChoosen(suggestionList.getSelectionModel().getSelectedItem());
                 break;
-
+            case ESCAPE:
+                control.hide();
+                break;
             default:
                 break;
             }
