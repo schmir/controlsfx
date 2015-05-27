@@ -222,8 +222,8 @@ public class SegmentedButton extends ControlsFXControl {
      *************************************************************************/
     
     /** {@inheritDoc} */
-    @Override public String getUserAgentStylesheet() {
-        return getUserAgentStylesheet(SegmentedButton.class, "segmentedbutton.css");
-    }
+//    @Override public String getUserAgentStylesheet() {
+//        return getUserAgentStylesheet(SegmentedButton.class, "segmentedbutton.css");
+//    }
 
 }

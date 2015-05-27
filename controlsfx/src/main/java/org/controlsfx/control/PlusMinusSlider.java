@@ -100,9 +100,9 @@ public class PlusMinusSlider extends ControlsFXControl {
 	}
 
     /** {@inheritDoc} */
-    @Override public String getUserAgentStylesheet() {
-        return getUserAgentStylesheet(PlusMinusSlider.class, "plusminusslider.css");
-    }
+//    @Override public String getUserAgentStylesheet() {
+//        return getUserAgentStylesheet(PlusMinusSlider.class, "plusminusslider.css");
+//    }
 
 	@Override
 	protected Skin<?> createDefaultSkin() {

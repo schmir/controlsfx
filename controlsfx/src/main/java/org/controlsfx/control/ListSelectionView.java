@@ -29,7 +29,6 @@ package org.controlsfx.control;
 import static impl.org.controlsfx.i18n.Localization.asKey;
 import static impl.org.controlsfx.i18n.Localization.localize;
 
-import com.sun.javafx.css.StyleManager;
 
 import impl.org.controlsfx.skin.ListSelectionViewSkin;
 import javafx.beans.property.ObjectProperty;
@@ -97,9 +96,9 @@ public class ListSelectionView<T> extends ControlsFXControl {
     }
 
     /** {@inheritDoc} */
-    @Override public String getUserAgentStylesheet() {
-        return getUserAgentStylesheet(ListSelectionView.class, "listselectionview.css");
-    }
+//    @Override public String getUserAgentStylesheet() {
+//        return getUserAgentStylesheet(ListSelectionView.class, "listselectionview.css");
+//    }
 
     private final ObjectProperty<Node> sourceHeader = new SimpleObjectProperty<>(
             this, "sourceHeader");

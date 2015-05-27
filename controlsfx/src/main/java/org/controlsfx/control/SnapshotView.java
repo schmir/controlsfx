@@ -664,9 +664,9 @@ public class SnapshotView extends ControlsFXControl {
     private static final String DEFAULT_STYLE_CLASS = "snapshot-view"; //$NON-NLS-1$
 
     /** {@inheritDoc} */
-    @Override public String getUserAgentStylesheet() {
-        return getUserAgentStylesheet(SnapshotView.class, "snapshot-view.css");
-    }
+//    @Override public String getUserAgentStylesheet() {
+//        return getUserAgentStylesheet(SnapshotView.class, "snapshot-view.css");
+//    }
 
     /**
      * Creates a {@link StyleableDoubleProperty} with the specified arguments.

@@ -55,6 +55,11 @@ import com.sun.javafx.scene.control.skin.BehaviorSkinBase;
  */
 public class SnapshotViewSkin extends BehaviorSkinBase<SnapshotView, SnapshotViewBehavior> {
 
+    static {
+        // refer to ControlsFXControl for why this is necessary
+        StyleManager.getInstance().addUserAgentStylesheet(
+                SnapshotView.class.getResource("snapshot-view.css").toExternalForm()); //$NON-NLS-1$
+    }
     /* ************************************************************************
      *                                                                         *
      * Attributes & Properties                                                 *

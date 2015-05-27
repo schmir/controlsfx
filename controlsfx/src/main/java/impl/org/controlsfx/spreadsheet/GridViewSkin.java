@@ -26,6 +26,7 @@
  */
 package impl.org.controlsfx.spreadsheet;
 
+import com.sun.javafx.css.StyleManager;
 import java.lang.reflect.Field;
 import java.time.LocalDate;
 import java.util.BitSet;
@@ -94,6 +95,11 @@ public class GridViewSkin extends TableViewSkinBase<ObservableList<SpreadsheetCe
      * * STATIC FIELDS * *
      **************************************************************************/
 
+    static {
+        // refer to ControlsFXControl for why this is necessary
+        StyleManager.getInstance().addUserAgentStylesheet(
+                SpreadsheetView.class.getResource("spreadsheet.css").toExternalForm()); //$NON-NLS-1$
+    }
     /** Default height of a row. */
     public static final double DEFAULT_CELL_HEIGHT;
 

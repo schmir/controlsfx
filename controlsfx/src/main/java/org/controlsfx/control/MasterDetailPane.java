@@ -149,9 +149,9 @@ public class MasterDetailPane extends ControlsFXControl {
     }
     
     /** {@inheritDoc} */
-    @Override public String getUserAgentStylesheet() {
-        return getUserAgentStylesheet(MasterDetailPane.class, "masterdetailpane.css");
-    }
+//    @Override public String getUserAgentStylesheet() {
+//        return getUserAgentStylesheet(MasterDetailPane.class, "masterdetailpane.css");
+//    }
 
     // Detail postion support
 

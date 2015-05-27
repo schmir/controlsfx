@@ -26,6 +26,7 @@
  */
 package impl.org.controlsfx.skin;
 
+import com.sun.javafx.css.StyleManager;
 import javafx.beans.property.ObjectProperty;
 import javafx.css.PseudoClass;
 import javafx.geometry.Pos;
@@ -36,6 +37,7 @@ import javafx.scene.layout.StackPane;
 import com.sun.javafx.scene.control.behavior.TextFieldBehavior;
 import com.sun.javafx.scene.control.skin.TextFieldSkin;
 import com.sun.javafx.scene.text.HitInfo;
+import org.controlsfx.control.textfield.CustomTextField;
 
 public abstract class CustomTextFieldSkin extends TextFieldSkin {
         
@@ -43,6 +45,11 @@ public abstract class CustomTextFieldSkin extends TextFieldSkin {
     private static final PseudoClass HAS_LEFT_NODE = PseudoClass.getPseudoClass("left-node-visible"); //$NON-NLS-1$
     private static final PseudoClass HAS_RIGHT_NODE = PseudoClass.getPseudoClass("right-node-visible"); //$NON-NLS-1$
     
+    static {
+        // refer to ControlsFXControl for why this is necessary
+        StyleManager.getInstance().addUserAgentStylesheet(
+                CustomTextField.class.getResource("customtextfield.css").toExternalForm()); //$NON-NLS-1$
+    }
     private Node left;
     private StackPane leftPane;
     private Node right;

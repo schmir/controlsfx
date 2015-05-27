@@ -172,7 +172,7 @@ public class CustomTextField extends TextField {
     /**
      * {@inheritDoc}
      */
-    @Override public String getUserAgentStylesheet() {
-        return CustomTextField.class.getResource("customtextfield.css").toExternalForm(); //$NON-NLS-1$
-    }
+//    @Override public String getUserAgentStylesheet() {
+//        return CustomTextField.class.getResource("customtextfield.css").toExternalForm(); //$NON-NLS-1$
+//    }
 }

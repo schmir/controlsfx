@@ -29,7 +29,6 @@ package org.controlsfx.control;
 import static impl.org.controlsfx.i18n.Localization.asKey;
 import static impl.org.controlsfx.i18n.Localization.localize;
 
-import com.sun.javafx.css.StyleManager;
 
 import impl.org.controlsfx.skin.StatusBarSkin;
 import javafx.beans.property.DoubleProperty;
@@ -88,10 +87,10 @@ public class StatusBar extends ControlsFXControl {
         return new StatusBarSkin(this);
     }
 
-    /** {@inheritDoc} */
-    @Override public String getUserAgentStylesheet() {
-        return getUserAgentStylesheet(StatusBar.class, "statusbar.css");
-    }
+//    /** {@inheritDoc} */
+//    @Override public String getUserAgentStylesheet() {
+//        return getUserAgentStylesheet(StatusBar.class, "statusbar.css");
+//    }
     
     private final StringProperty text = new SimpleStringProperty(this, "text", //$NON-NLS-1$
             localize(asKey("statusbar.ok"))); //$NON-NLS-1$

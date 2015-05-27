@@ -337,7 +337,7 @@ public class BreadCrumbBar<T> extends ControlsFXControl {
     }
 
     /** {@inheritDoc} */
-    @Override public String getUserAgentStylesheet() {
-        return getUserAgentStylesheet(BreadCrumbBar.class, "breadcrumbbar.css");
-    }
+//    @Override public String getUserAgentStylesheet() {
+//        return getUserAgentStylesheet(BreadCrumbBar.class, "breadcrumbbar.css");
+//    }
 }

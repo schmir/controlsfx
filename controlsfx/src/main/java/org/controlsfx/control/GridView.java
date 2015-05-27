@@ -143,9 +143,9 @@ public class GridView<T> extends ControlsFXControl {
     }
 
     /** {@inheritDoc} */
-    @Override public String getUserAgentStylesheet() {
-        return getUserAgentStylesheet(GridView.class, "gridview.css");
-    }
+//    @Override public String getUserAgentStylesheet() {
+//        return getUserAgentStylesheet(GridView.class, "gridview.css");
+//    }
     
     /**************************************************************************
      * 

@@ -68,6 +68,12 @@ public class BreadCrumbBarSkin<T> extends BehaviorSkinBase<BreadCrumbBar<T>, Beh
         
     private static final String STYLE_CLASS_FIRST = "first"; //$NON-NLS-1$
 
+    static {
+        // refer to ControlsFXControl for why this is necessary
+        StyleManager.getInstance().addUserAgentStylesheet(
+                BreadCrumbBar.class.getResource("breadcrumbbar.css").toExternalForm()); //$NON-NLS-1$
+    }
+    
     public BreadCrumbBarSkin(final BreadCrumbBar<T> control) {
         super(control, new BehaviorBase<>(control, Collections.<KeyBinding> emptyList()));
         control.selectedCrumbProperty().addListener(selectedPathChangeListener);

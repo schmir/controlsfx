@@ -248,9 +248,9 @@ public class PropertySheet extends ControlsFXControl {
     }
     
     /** {@inheritDoc} */
-    @Override public String getUserAgentStylesheet() {
-        return getUserAgentStylesheet(PropertySheet.class, "propertysheet.css");
-    }
+//    @Override public String getUserAgentStylesheet() {
+//        return getUserAgentStylesheet(PropertySheet.class, "propertysheet.css");
+//    }
 
     
     /**************************************************************************

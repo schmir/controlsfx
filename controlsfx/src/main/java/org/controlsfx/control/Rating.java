@@ -169,9 +169,9 @@ public class Rating extends ControlsFXControl {
     }
 
     /** {@inheritDoc} */
-    @Override public String getUserAgentStylesheet() {
-        return getUserAgentStylesheet(Rating.class, "rating.css");
-    }
+//    @Override public String getUserAgentStylesheet() {
+//        return getUserAgentStylesheet(Rating.class, "rating.css");
+//    }
     
     /***************************************************************************
      * 
