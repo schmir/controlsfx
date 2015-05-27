@@ -1021,10 +1021,10 @@ public class GridViewSkin extends TableViewSkinBase<ObservableList<SpreadsheetCe
         return getSkinnable().resizeColumn(tc, delta);
     }
 
-    @Override
-    protected void edit(int index, TableColumn<ObservableList<SpreadsheetCell>, ?> column) {
-        getSkinnable().edit(index, column);
-    }
+//    @Override
+//    protected void edit(int index, TableColumn<ObservableList<SpreadsheetCell>, ?> column) {
+//        getSkinnable().edit(index, column);
+//    }
 
     @Override
     public TableRow<ObservableList<SpreadsheetCell>> createCell() {
